@@ -3,8 +3,9 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#experience', label: 'Experience' },
+  { href: '#my-story', label: 'My Story' },
+  { href: '#coursework', label: 'Coursework' },
+  { href: '#experiences', label: 'Experiences' },
   { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
   { href: '#contact', label: 'Contact' },
