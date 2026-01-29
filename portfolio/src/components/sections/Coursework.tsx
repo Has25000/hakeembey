@@ -17,7 +17,7 @@ const courses: Course[] = [
     type: 'Core Requirement',
     description: 'An intensive, hands-on course focused on the fundamentals of launching a venture. Covered customer discovery, MVP development, pitch creation, and early-stage startup operations.',
     takeaways: [
-      'Learned to validate ideas through customer interviews before building—"get out of the building" mentality',
+      'Learned to validate ideas through customer interviews before building, embracing the "get out of the building" mentality',
       'Developed skills in crafting compelling narratives and pitches that resonate with investors and users',
       'Understood the importance of iteration and pivoting based on real user feedback',
     ],
@@ -40,7 +40,7 @@ const courses: Course[] = [
     description: 'A competitive immersive program combining coursework in "Building and Sustaining a Successful Enterprise" with site visits to OpenAI, Google, Apple, Meta, Sequoia Capital, and other leading tech companies and venture firms.',
     takeaways: [
       'Gained firsthand exposure to how top companies think about product-market fit and scaling',
-      'Networked with Duke alumni founders, PMs, and VCs—understanding different paths in tech',
+      'Networked with Duke alumni founders, PMs, and VCs, gaining insight into different paths in tech',
       'Learned that culture and team dynamics are as important as technical excellence',
     ],
   },
@@ -135,7 +135,7 @@ export function Coursework() {
               Connecting the Dots
             </h3>
             <p className="text-text-secondary leading-relaxed mb-4">
-              The power of the I&E Certificate isn't in any single course—it's in how they connect.
+              The power of the I&E Certificate isn't in any single course. It's in how they connect.
               <span className="text-text-primary font-medium"> I&E 352</span> gave me the tactical skills
               of customer discovery and MVP development. <span className="text-text-primary font-medium">Duke in Silicon Valley</span>
               showed me what success looks like at scale and connected me with people building at the frontier.

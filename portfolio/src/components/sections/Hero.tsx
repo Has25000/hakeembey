@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Mail, FileText } from 'lucide-react';
+import headshot from '../../assets/headshot.jpg';
 
 export function Hero() {
   return (
@@ -16,10 +17,24 @@ export function Hero() {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        {/* Headshot */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="mb-6"
+        >
+          <img
+            src={headshot}
+            alt="Hakeem Shitta-Bey"
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-accent/30 shadow-xl shadow-accent/10"
+          />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
         >
           <p className="text-accent font-medium mb-4 tracking-wide">
             Hi, I'm
@@ -29,7 +44,7 @@ export function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="text-5xl md:text-7xl font-bold text-text-primary mb-6"
         >
           Hakeem Shitta-Bey
@@ -38,7 +53,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
           className="mb-6"
         >
           <span className="text-2xl md:text-3xl font-semibold gradient-text">
@@ -61,7 +76,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a href="#projects" className="btn-primary">

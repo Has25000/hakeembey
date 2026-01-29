@@ -100,7 +100,7 @@ export function About() {
             className="mt-6 p-4 rounded-lg border border-accent/20 bg-accent/5"
           >
             <p className="text-sm text-text-secondary">
-              <span className="text-accent font-medium">Duke in Silicon Valley '25</span> — Engaged with
+              <span className="text-accent font-medium">Duke in Silicon Valley '25</span>: Engaged with
               leaders from OpenAI, Google, Apple, Sequoia Capital, and more on product-market fit,
               scaling, and innovation.
             </p>
