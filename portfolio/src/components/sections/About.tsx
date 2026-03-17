@@ -16,7 +16,7 @@ export function About() {
     {
       icon: Rocket,
       title: 'Founder',
-      description: 'Built Trybl to 186+ users',
+      description: 'Built Trybl — grew to 174 users, pivoted, rescaling with 44 active users',
     },
     {
       icon: Users,

@@ -150,16 +150,24 @@ export function MyStory() {
                 Current Entrepreneurial Ventures
               </h3>
               <p className="text-text-secondary leading-relaxed mb-4">
-                I'm currently the <span className="text-text-primary font-medium">Founder & Full-Stack Engineer
+                I'm the <span className="text-text-primary font-medium">Founder & Full-Stack Engineer
                 at Trybl</span>, a mobile platform helping Duke students discover resources, events, and connect
-                with peers. We've grown to 186+ users through campus partnerships with freshman orientation,
-                student organizations, and the cultural center. I lead a team of 10+ people across product,
-                engineering, and operations.
+                with peers. We grew to 174 users through campus partnerships with freshman orientation,
+                student organizations, and the cultural center, then rebuilt the entire tech stack and pivoted the product
+                to better serve student needs. We're now rescaling with 44 active users on the new platform and have an
+                upcoming summer meeting with <span className="text-text-primary font-medium">Duke's Housing & Residence Life</span> to
+                explore integrating Trybl into the university housing experience. I lead a team of 10+ people across product,
+                engineering, and operations. After graduation, I plan to take Trybl full-time with runway through August.
               </p>
-              <p className="text-text-secondary leading-relaxed">
+              <p className="text-text-secondary leading-relaxed mb-4">
                 Previously, I co-founded <span className="text-text-primary font-medium">Resonate</span>, a
                 cross-platform mobile app where I shipped 6 features and acquired 80 beta users in just 2 weeks.
                 These ventures taught me that entrepreneurship is about iteration, user feedback, and relentless execution.
+              </p>
+              <p className="text-text-secondary leading-relaxed">
+                Through building Trybl, I've developed skills in <span className="text-text-primary font-medium">execution at speed,
+                growth strategy, team management, full-stack engineering, investing/fundraising, and relationship building</span>.
+                These are the skills I'll carry forward as I build companies that solve real problems.
               </p>
             </div>
           </div>

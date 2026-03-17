@@ -21,7 +21,7 @@ export const projects: Project[] = [
     tags: ['React Native', 'TypeScript', 'Go', 'PocketBase', 'RAG'],
     category: 'software',
     featured: true,
-    metrics: '186+ users',
+    metrics: '174 users → pivot → 44 active (rescaling)',
   },
   {
     id: 'equal-iq',

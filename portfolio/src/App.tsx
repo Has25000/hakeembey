@@ -4,6 +4,7 @@ import { Hero } from './components/sections/Hero';
 import { MyStory } from './components/sections/MyStory';
 import { Coursework } from './components/sections/Coursework';
 import { IEExperiences } from './components/sections/IEExperiences';
+import { FinalReflection } from './components/sections/FinalReflection';
 import { Projects } from './components/sections/Projects';
 import { Skills } from './components/sections/Skills';
 import { Contact } from './components/sections/Contact';
@@ -17,6 +18,7 @@ function App() {
         <MyStory />
         <Coursework />
         <IEExperiences />
+        <FinalReflection />
         <Projects />
         <Skills />
         <Contact />

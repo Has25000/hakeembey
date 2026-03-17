@@ -49,7 +49,7 @@ export const experiences: Experience[] = [
       'Designed, built, and shipped a full-stack mobile app for student resources, events, social feeds, and collaboration using React Native (Expo), TypeScript, Go, and PocketBase',
       'Implementing a tool-calling chatbot backed by a vector database and RAG pipeline to retrieve personalized context and execute actions via backend APIs',
       'Engineered a scalable data model with 15+ collections and built a navigation system with custom filtering, memoized components, and virtualized lists',
-      'Leading product, engineering, and operations end-to-end; managing a 10+ person team and grew the app to 186 users',
+      'Leading product, engineering, and operations end-to-end; managing a 10+ person team — grew to 174 users, rebuilt tech stack and pivoted, now rescaling with 44 active users on new platform',
     ],
     tags: ['React Native', 'TypeScript', 'Go', 'PocketBase', 'RAG'],
   },

@@ -1,6 +1,9 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Briefcase, Lightbulb, AlertCircle, BookOpen, FileText, ChevronDown, ChevronUp, Clock } from 'lucide-react';
+import { Briefcase, Lightbulb, AlertCircle, FileText, ChevronDown, ChevronUp, Clock } from 'lucide-react';
+import riceResearchPoster from '../../assets/rice_research_poster.jpg';
+import resonateScreens from '../../assets/resonate_screens.jpg';
+import resonateOnboarding from '../../assets/resonate_onboarding.jpg';
 
 interface Experience {
   id: string;
@@ -22,6 +25,7 @@ interface Experience {
   workProduct: {
     description: string;
     placeholder: boolean;
+    images?: { src: string; alt: string; caption: string }[];
   };
 }
 
@@ -54,8 +58,12 @@ const experiences: Experience[] = [
       ],
     },
     workProduct: {
-      description: 'Work product demonstrating the Resonate platform, user growth metrics, and technical architecture.',
-      placeholder: true,
+      description: 'Screenshots from the Resonate mobile app showing the chat interface, active/pending conversations, and the user onboarding flow. These demonstrate the cross-platform product I helped build as a technical co-founder.',
+      placeholder: false,
+      images: [
+        { src: resonateScreens, alt: 'Resonate app screenshots showing chat UI and active/pending chats', caption: 'Resonate chat interface — active and pending conversation views' },
+        { src: resonateOnboarding, alt: 'Resonate onboarding flow', caption: 'User onboarding flow designed to reduce friction and increase activation' },
+      ],
     },
   },
   {
@@ -88,8 +96,11 @@ const experiences: Experience[] = [
       ],
     },
     workProduct: {
-      description: 'Research deliverables including analysis code, data visualizations, and presentation materials from the Hilton Lab.',
-      placeholder: true,
+      description: 'Research poster: "Suppression of IDO1 and Other Inflammation Regulatory Genes Using CRISPR Knock Out" — presented at the Rice University research symposium, summarizing the CRISPR screening work and gene regulation findings from the Hilton Lab.',
+      placeholder: false,
+      images: [
+        { src: riceResearchPoster, alt: 'Research poster: Suppression of IDO1 and Other Inflammation Regulatory Genes Using CRISPR Knock Out', caption: 'Research poster presented at Rice University symposium on CRISPR-based suppression of IDO1 and inflammation regulatory genes' },
+      ],
     },
   },
 ];
@@ -272,16 +283,20 @@ export function IEExperiences() {
               </button>
               {isExpanded(exp.id, 'workProduct') && (
                 <div className="px-6 pb-6">
-                  {exp.workProduct.placeholder ? (
-                    <div className="p-6 rounded-lg border-2 border-dashed border-border bg-surface/50 text-center">
-                      <BookOpen size={32} className="mx-auto text-text-muted mb-3" />
-                      <p className="text-text-secondary mb-2">{exp.workProduct.description}</p>
-                      <p className="text-text-muted text-sm">
-                        Work product will be added here (slides, graphics, code samples, or other deliverables)
-                      </p>
+                  <p className="text-text-secondary mb-4">{exp.workProduct.description}</p>
+                  {exp.workProduct.images && exp.workProduct.images.length > 0 && (
+                    <div className={`grid gap-4 ${exp.workProduct.images.length > 1 ? 'md:grid-cols-2' : 'max-w-2xl'}`}>
+                      {exp.workProduct.images.map((img, i) => (
+                        <div key={i} className="rounded-lg overflow-hidden border border-border">
+                          <img
+                            src={img.src}
+                            alt={img.alt}
+                            className="w-full h-auto object-contain bg-white"
+                          />
+                          <p className="text-text-muted text-xs p-3 bg-surface/50">{img.caption}</p>
+                        </div>
+                      ))}
                     </div>
-                  ) : (
-                    <p className="text-text-secondary">{exp.workProduct.description}</p>
                   )}
                 </div>
               )}

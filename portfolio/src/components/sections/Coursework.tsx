@@ -7,6 +7,7 @@ interface Course {
   name: string;
   type: string;
   description: string;
+  whyChosen: string;
   takeaways: string[];
 }
 
@@ -16,6 +17,7 @@ const courses: Course[] = [
     name: 'I&E 352: Founder\'s Workshop',
     type: 'Core Requirement',
     description: 'An intensive, hands-on course focused on the fundamentals of launching a venture. Covered customer discovery, MVP development, pitch creation, and early-stage startup operations.',
+    whyChosen: 'I chose Founder\'s Workshop because I wanted tactical, hands-on frameworks for turning ideas into real products. I knew I wanted to build ventures, not just study them, and this course promised to teach me the "get out of the building" approach to validation that I later applied directly to Trybl and Resonate.',
     takeaways: [
       'Learned to validate ideas through customer interviews before building, embracing the "get out of the building" mentality',
       'Developed skills in crafting compelling narratives and pitches that resonate with investors and users',
@@ -26,11 +28,12 @@ const courses: Course[] = [
     id: 'capstone',
     name: 'I&E Capstone',
     type: 'Capstone Course',
-    description: 'The culminating experience of the I&E Certificate, integrating learnings from all coursework into a comprehensive venture project. Applied frameworks from across the curriculum to a real entrepreneurial challenge.',
+    description: 'The capstone experience where I built Trybl as my venture project. I grew the platform to 174 users, managed a team of 10+, then made the hard decision to rebuild the entire tech stack and pivot the product based on user feedback. We\'re now rescaling with 44 active users on the new platform and have a summer meeting lined up with Duke Housing & Residence Life to explore institutional integration.',
+    whyChosen: 'I chose the Capstone because it was the chance to go all-in on building Trybl within a structured framework. I wanted the accountability of presenting progress to advisors and peers while applying everything I\'d learned across my I&E coursework to a real venture with real users and real stakes.',
     takeaways: [
-      'Synthesized technical skills with business strategy to create viable venture plans',
-      'Practiced presenting to stakeholders and defending decisions under scrutiny',
-      'Learned to balance vision with pragmatic execution and resource constraints',
+      'Learned that pivoting isn\'t failure — it\'s a sign you\'re listening to users and willing to make hard decisions for the right outcome',
+      'Experienced the full emotional arc of building: growing to 174 users, tearing down the tech stack, and rebuilding with conviction',
+      'Developed skills in execution at speed, growth strategy, team management, and relationship building with institutional stakeholders',
     ],
   },
   {
@@ -38,6 +41,7 @@ const courses: Course[] = [
     name: 'Duke in Silicon Valley',
     type: 'Gateway Elective',
     description: 'A competitive immersive program combining coursework in "Building and Sustaining a Successful Enterprise" with site visits to OpenAI, Google, Apple, Meta, Sequoia Capital, and other leading tech companies and venture firms.',
+    whyChosen: 'I chose Duke in Silicon Valley because I wanted to see what building at the highest level looks like. As someone planning to take Trybl full-time after graduation, I needed exposure to how top founders, PMs, and VCs think about scaling, product-market fit, and team building — lessons I couldn\'t get from a textbook.',
     takeaways: [
       'Gained firsthand exposure to how top companies think about product-market fit and scaling',
       'Networked with Duke alumni founders, PMs, and VCs, gaining insight into different paths in tech',
@@ -49,6 +53,7 @@ const courses: Course[] = [
     name: 'BME Design',
     type: 'Elective',
     description: 'Applied design thinking principles to biomedical engineering challenges. Worked through the full product development cycle from problem identification to prototyping and testing.',
+    whyChosen: 'I chose BME Design because I wanted to ground my engineering work in human-centered thinking. Building consumer products like Trybl requires deep empathy for users, and this course taught me systematic approaches to understanding user needs, rapid prototyping, and iterating based on real feedback — all skills I use daily as a founder.',
     takeaways: [
       'Learned human-centered design principles and how to empathize with end users',
       'Gained experience with rapid prototyping and iterative design processes',
@@ -101,6 +106,11 @@ export function Coursework() {
             <p className="text-text-secondary text-sm leading-relaxed mb-4">
               {course.description}
             </p>
+
+            <div className="mb-4 p-3 rounded-lg bg-violet/5 border border-violet/20">
+              <p className="text-xs text-violet font-medium uppercase tracking-wide mb-1">Why I Chose This Course</p>
+              <p className="text-text-secondary text-sm leading-relaxed">{course.whyChosen}</p>
+            </div>
 
             <div className="space-y-2">
               <p className="text-xs text-text-muted uppercase tracking-wide flex items-center gap-1">
